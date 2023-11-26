@@ -67,6 +67,12 @@ header div div {
     margin-bottom: 2.5rem;
 }
 
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 header > div {
     max-width: 33.74rem;
     margin-inline: auto;
