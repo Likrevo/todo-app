@@ -1,5 +1,3 @@
-const { application } = require("express")
-
 function completarTarefa(id) {
     fetch("http://localhost:3000/completar", {
         method: "POST",
@@ -57,13 +55,15 @@ function verificarTema() {
     const body = document.querySelector("body")
     const button = document.querySelector(".tema-button")
 
-    if (tema === "dark") {
-        body.classList.add("dark")
-        button.innerHTML = `<img src="/imagens/sun-icon.png" alt="ícone do sol">`
-    } else {
-        body.classList.add("light")
-        button.innerHTML = `<img src="/imagens/moon-icon.png" alt="ícone de lua">`
-    }
+    if (tema) {
+        if (tema === "dark") {
+            body.classList.add("dark")
+            button.innerHTML = `<img src="/imagens/sun-icon.png" alt="ícone do sol">`
+        } else {
+            body.classList.add("light")
+            button.innerHTML = `<img src="/imagens/moon-icon.png" alt="ícone de lua">`
+        }
+    } 
 }
 
 verificarTema()
